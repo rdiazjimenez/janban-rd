@@ -1,0 +1,157 @@
+<a href="https://janware.nl/gitlab/upgrade.html">Upgrade Instructions for local installations</a>
+
+<h2>Version 2.1.11</h2>
+<li>Added a checkbox to hide or show the task details in the report, see the Layout Configuration</li>
+<li>Optionally save the drag-and-drop order of tasks per column, instead of ordering by priority and date; see the Behavior Configuration (thanks to user Ivan Petrovic)</li>
+<li>Filter the Backlog to only show tasks having status NOT STARTED. This went wrong in some configurations (Thanks for the fix, Ricardo Diaz)</li>
+
+<h2>Version 2.1.10</h2>
+<li>Fixed the multi-mailbox feature. This didn't work anymore by previous changes.</li>
+<li>Added automatic refresh of the board in the background, in case tasks are added outside the board. This can be configured in the Behavior Configuration</li>
+<li>Fixed caching issues when the 'online' setup is used. For existing users: change your Home Page url to http instead of https</li>
+
+<h2>Version 2.1.9</h2>
+<li>solved an issue for new users, to create the default config correctly</li>
+<li>solved a few bugs in detecting the default mailbox in Outlook</li>
+<li>renamed lib folder to lip, due to some weird issues at my provider's system</li>
+
+<h2>Version 2.1.8</h2>
+<li>Completely rewrote the code for dragging and dropping tasks. It is now more concise and faster and less buggy.</li>
+
+<h2>Version 2.1.7</h2>
+<li>Sometimes tasks jump back after dragging them to a new column. This is fixed.</li>
+
+<h2>Version 2.1.6</h2>
+<li>Added meta tags to the html page to avoid caching issues.</li>
+<li>(Sorry for the frequent updates today)</li>
+
+<h2>Version 2.1.5</h2>
+<li>Improved the "What's new" link. It often displayed the information of the previous update. </li>
+<li>Added the release history to the About screen.</li>
+
+<h2>Version 2.1.4</h2>
+<li>Made loading of the app faster when not using the multi-mailbox feature. (thanks for the tip, Ben Lowry).</li>
+<li>Made loading of the screen faster by optimizing reading of tasks.</li>
+<li>Added displaying Start Date and Due Date to the configuration.</li>
+<li>Fixed the WIP limit check.</li>
+
+<h2>Version 2.1.3</h2>
+<li>Added a dark mode. Every application that wants to be taken seriously should have that nowadays. Goto Layout Config to switch it on or off.</li>
+<li>Ignore mailboxes refering to a pst or ost file that does not exist on the system.</li>
+
+<h2>Version 2.1.2</h2>
+<li>The board configuration goes crazy when you subscribe to an Internet Calendar in Outlook. This has been fixed. (user RobV helped me debugging this issue. Thx for your patience!)</li>
+<li>Removed the 'ping back' feature that I used to count how many users installed the app.</li>
+
+<h2>Version 2.1.1</h2>
+<li>The categories selection list now only displays the categories that are actually used in the current task board</li>
+<li>Version 2.1.0 caused error messages popping up for a few users after the upgrade from 2.0.20. These issues have been fixed.</li>
+<li>The multiple mailbox feature will now only list mailboxes having a Tasks folder. This means that you have to create a Tasks folder for non-Exchange mailboxes first, before it will be available for a Kanboad board. This is mainly the procedure you have to follow for IMAP mailboxes, or PST files you created yourself.</li>
+
+<h2>Version 2.1.0</h2>
+<li>Finally: support for task boards per mailbox.
+   It works for shared Exchange mailboxes, as well as for other IMAP mailboxes you might have.
+   There is an option in the configuration screen where you can switch on multi-mailbox support.<br/> You can then select for which mailboxes you want to have a separate kanban board.</li>
+<li><b>Important:</b>If you want to use a separate kanban board for a shared mailbox, then make sure the option 'Download shared folders' for your account is switched off! <a href="https://support.office.com/en-us/article/Download-public-folders-in-Cached-Exchange-Mode-39807488-8098-4A9C-B246-4C25E3E20510">How?</a></li>
+<li>Fixed an issue with the bootstrap fonts not being available locally</li>
+<li>The install script didn't work for office 2016. That is fixed</li>
+<li>The config screen sections are now collapsing. This gives more space for future configuration options</li>
+<li>Replaced the Postcardware statement by a BuyMeACoffee link. I didn't receive a single postcard after almost 400 downloads, so I think I still need to make my own coffee...</li>
+<li>Opened a discussion platform on <a href="https://discord.gg/2ZFTckV">Discord</a>. This enables end users to help each other, and it is a place for me to do announcments.</li>
+<li>Using note items for the hyperlinks to other web sites on the About page, because the builtin browser in Outlook is a crappy limited version of Internet Explorer</li>
+<li>Added a config option to suppress the notification when a newer version is available</li>
+<li>Use https://janware.nl/janban-next as folder homepage to see a sneak preview of the next version under development. <a href="http://janware.nl/janban-next/whatsnew.html">What's new?</a></li>
+
+<h2>Version 2.0.20</h2>
+<p>Apart from a local installation, the JanBan app can now be run from the internet as well.
+<br>Your tasks will not be exposed, because the app still keeps all your data within the context of Outlook. Only the app will be pulled from the internet.
+<br>This solves the issue for people who cannot - or do not want to - install software locally.</p>
+<p>Changing to this new setup is just a matter of using another url as the home page of your Outlook Home Folder:</p>
+<li>Right-click your Outlook Home Folder and then click Properties. Select the Home Page tab in the Properties dialog box.</li>
+<li>In the Address box, type: <b>https://janware.nl/janban</b>. Click to select the Show home page by default for this folder check box and then click OK.</li>
+<li>Or download and run the <a href="https://janware.nl/gitlab/install.zip">install.cmd</a> batch file, which does this for you.</li>
+<p></p>
+<p>But of course you can stick to your local version. That's up to you.</p>
+<p></p>
+<table border="1">
+    <tbody>
+    <tr>
+        <th> </th>
+        <th>Online</th>
+        <th>Local</th>
+    </tr>
+    <tr>
+        <td>Setup</td>
+        <td>Very easy</td>
+        <td>Quite a bit of work</td>
+    </tr>
+    <tr>
+        <td>Updates</td>
+        <td>Automatic, no action needed from your side</td>
+        <td>You need to install the updates yourself</td>
+    </tr>
+    <tr>
+        <td>Offline</td>
+        <td>The app won't work when you have no internet connection</td>
+        <td>The app can still be used if the internet is down</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Version 2.0.19</h2>
+<li>Version 2.0.18 did not display the priority colors any more. Sorry for this bug. It is fixed in this version.</li>
+
+<h2>Version 2.0.18</h2>
+<li>From now on previous versions will be kept at https://janware.nl/gitlab/. If you want to go back after an upgrade just download and install the version you want to have.</li>
+<li>To better support users using the GTD planning method, a Someday/Maybe column has been added. It is hidden by default. Go to the Config screen to unhide it. The Someday column does not display due dates, and does not indicate if a task has high or low priority. It just lists the tasks.</li>
+
+<h2>Version 2.0.17</h2>
+<li>Setting the limit to zero to switch off the limit on the Next and InProgress columns didn't always work properly. This is fixed.</li>
+<li>Added the installation folder to the config screen.</li>
+<li>Added written and animated instructions on how to upgrade to a newer version.</li>
+<li>Solved a backbards compatibility problem with older versions that do not use the 'Kanban' folder name for the task lanes. Conversion to the current system will be done automatically.</li>
+
+<h2>Version 2.0.16</h2>
+<li>Added a config option to switch debug logging on. In case of issues this log can be added to the support email.</li>
+<li>Added checkboxes to select which attachments should be added to the support email.</li>
+<li>Added error handling in all functions in order to have detailed information when something goes wrong.</li>
+<li>Added a popup message when you drop a task in a folder when the maximum number of items is reached.</li>
+
+<strong>Sometimes you have to hit Ctrl-F5 before you will see the latest info in this What's new page...</strong>
+
+<h2>Version 2.0.15</h2>
+<li>By request of a few users I added a select box in the filter bar to quickly switch between categories (or projects, as a few users use them).</li>
+
+<h2>Version 2.0.14</h2>
+<li>Added a ping back to monitor if the app is actually being used. This can be switched off if you don't want this to happen.</li>
+
+<h2>Version 2.0.13</h2>
+<li>If you upgrade from an early version of this plugin, the configuration is not compatible. This is fixed.</li>
+
+<h2>Version 2.0.12</h2>
+<li>Your configuration will be attached to the feedback/support email for easier debugging</li>
+<li>Added your Outlook version to the subject of the support email</li>
+
+<h2>Version 2.0.11</h2>
+<li>For recurring tasks: move new tasks with future Start Dates back from Next to Backlog automatically</li>
+<li>Added a setting to the config screen in order to be able to move due tasks to the Next column automatically. Default: no</li>
+<li>Sometimes filtering didn't work after startup of the board. This is fixed</li>
+<li>Sometimes the filter jumped back to previous filter value. This is fixed</li>
+<li>It occured very rarely that the completion date could not be read during the automatic cleaning of the done tasks. This is fixed.</li>
+
+<h2>Version 2.0.10</h2>
+<li>Introduced the Postcardware statement on the About page</li>
+<li>Added the possibility to send a support or feedback message from the About page</li>
+
+<h2>Version 2.0.9</h2>
+<li>Changed install script for better Office version detection</li>
+<li>Use Glyphicon font from Bootstrap CDN instead of local version to fix caching issues</li>
+
+<h2>Version 2.0.8</h2>
+<li>Added Version History</li>
+
+<h2>Version 2.0.6</h2>
+<li>Fixed a bunch of minor issues</li>
+
+<h2>Version 2.0.0</h2>
+<li>Added Configuration screen</li>
