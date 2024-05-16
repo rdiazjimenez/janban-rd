@@ -1,5 +1,9 @@
 # Outlook Kanban Taskboard aka **JanBan**
 
+I've modified the sourcecode provided by JanBan in order to achieve certain functionalities.
+
+All credits are for JanBan.
+
 In case you found this repository on Github:
 
 _Note that this repository is hosted on [Gitlab](https://gitlab.com/janware/janban). The Github repository is a mirror._
