@@ -4,6 +4,10 @@ I've modified the sourcecode provided by JanBan in order to achieve certain func
 
 All credits are for JanBan.
 
+Ricardo
+
+########################################
+
 In case you found this repository on Github:
 
 _Note that this repository is hosted on [Gitlab](https://gitlab.com/janware/janban). The Github repository is a mirror._
@@ -19,18 +23,23 @@ I have added a lot of features, customization and configuration options.
 The main features of JanBan are:
 
 ### Moving Tasks between task lanes
+
 ![Moving Tasks](http://janware.nl/janban/movingtasks.gif)
 
 ### Filtering Tasks
+
 ![Filtering](http://janware.nl/janban/filtering.gif)
 
 ### Configuration
+
 ![Configuration](http://janware.nl/janban/config.gif)
 
 ### Support Mailbox
+
 ![Support](http://janware.nl/janban/support.gif)
 
 ### Platforms supported
+
 Only tested with Outlook 2013 and 2016 running on Windows 8.1/10.
 It may also work with earlier Outlook versions, and possibly work with Windows 7.
 
@@ -43,7 +52,6 @@ That's all !!
 ## Local Setup (advanced)
 
 For a local setup, refer to the instructions on http://papasmurf.nl/janban
-
 
 <br>
 <br>
